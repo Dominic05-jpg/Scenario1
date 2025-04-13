@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f1eb;
+  color: #333;
+  font-size: 16px;
+}
+
+nav {
+  height: 80px;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  transition: color 0.3s;
+}
+
+.nav-items a:hover {
+  color: #fdcc04;
+}
+
+.hero {
+  background: #f38b3b;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5%;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column-left {
+  flex: 1 1 45%;
+}
+
+.column-left h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.column-left p {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  color: #fff;
+  background: #070600;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1a1a1a;
+  color: #fdcc04;
+}
+
+.fun-fact {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff9db;
+  border-left: 5px solid #fdcc04;
+  display: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.column-right {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background: #1a1a1a;
+  padding: 1rem;
+  text-align: left;
+}
+
+.credit {
+  color: #fff;
+  font-size: 0.9rem;
+  padding-left: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-items {
+    margin-top: 0.5rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 5%;
+  }
+
+  .column-left,
+  .column-right {
+    flex: 1 1 100%;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
